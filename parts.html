@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parts preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      .panel { width: 280px; }
+      .meta { font: 13px var(--mono); color: var(--ink-soft); white-space: pre-line; }
+    </style>
+  </head>
+  <body>
+    <canvas id="stage"></canvas>
+
+    <aside class="panel">
+      <header class="panel-head">
+        <p class="eyebrow">Parts preview</p>
+        <h1>One part, on its own</h1>
+        <p class="lede">Pick a part, turn it with Q and E, hover it for its card. New parts appear here once they are listed in the catalog.</p>
+      </header>
+      <section class="card">
+        <h2>Part</h2>
+        <div class="params">
+          <div class="param">
+            <label><span>Part</span></label>
+            <select id="part"></select>
+          </div>
+          <div id="options"></div>
+          <div class="param" id="light-row" hidden>
+            <label><span>Light</span></label>
+            <input id="light" type="range" min="0" max="100" value="0" />
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Stats</h2>
+        <div id="meta" class="meta"></div>
+      </section>
+    </aside>
+
+    <nav class="viewbar" aria-label="View">
+      <button data-view="left" title="Turn left (Q)">↶</button>
+      <button data-view="right" title="Turn right (E)">↷</button>
+      <button data-view="home" title="Reset view">⌂</button>
+      <button data-view="grid" class="is-on" title="Show grid">▦</button>
+    </nav>
+
+    <div id="hotspot" class="hotspot" hidden></div>
+    <script type="module" src="/src/preview.js"></script>
+  </body>
+</html>

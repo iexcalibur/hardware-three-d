@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hardware 3D — Arduino stage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="stage"></canvas>
+
+    <aside class="panel">
+      <header class="panel-head">
+        <p class="eyebrow">Lesson 2</p>
+        <h1 id="title">Blink an LED</h1>
+        <p id="lede" class="lede"></p>
+      </header>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Sketch</h2>
+          <button id="run" class="run">Run</button>
+        </div>
+        <pre id="code" class="code"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Try it</h2>
+        <div id="params" class="params"></div>
+      </section>
+
+      <section class="card">
+        <h2>Wiring</h2>
+        <ul id="pinout" class="pinout"></ul>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Serial monitor</h2>
+          <span id="pins" class="pins"></span>
+        </div>
+        <ol id="log" class="log"></ol>
+      </section>
+    </aside>
+
+    <nav class="viewbar" aria-label="View">
+      <button data-view="left" title="Turn left (Q)">↶</button>
+      <button data-view="right" title="Turn right (E)">↷</button>
+      <button data-view="home" title="Reset view">⌂</button>
+      <button data-view="flow" class="is-on" title="Show current flow">⚡</button>
+      <button data-view="grid" class="is-on" title="Show grid">▦</button>
+    </nav>
+
+    <div id="hotspot" class="hotspot" hidden></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
