@@ -8,7 +8,7 @@ import { ease } from './Tweens.js';
 const DEG = Math.PI / 180;
 const QUARTER = 90 * DEG;
 const BASE_AZIMUTH = 36 * DEG;
-const MIN_ZOOM = 3.2;
+const MIN_ZOOM = 2.2;
 const MAX_ZOOM = 22;
 const RATCHET_PX = 110;
 

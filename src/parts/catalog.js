@@ -4,6 +4,7 @@ import { led, resistor } from './components.js';
 import { jumperWire } from './wire.js';
 import { pushButton } from './button.js';
 import { buildUno } from '../board/uno.js';
+import { raspberryPi4 } from './raspberryPi.js';
 
 // Every part the preview page (parts.html) can show. `size` is the rough
 // extent in mm, used to frame the camera. `build` gets { renderer }.
@@ -11,6 +12,7 @@ import { buildUno } from '../board/uno.js';
 
 export const catalog = {
   uno: { name: 'Arduino Uno', size: 80, build: ({ renderer }) => buildUno(renderer).root },
+  rpi4: { name: 'Raspberry Pi 4 B', size: 95, build: ({ renderer }) => raspberryPi4({ renderer }) },
   breadboard: { name: 'Breadboard', size: 70, build: () => breadboard() },
   led: {
     name: '5 mm LED',

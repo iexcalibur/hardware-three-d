@@ -243,7 +243,7 @@ export class Stage {
     const home = { target: v.target, zoom: v.zoom, azimuth: HOME.azimuth, elevation: HOME.elevation };
     if (!v.frame || !this.avail) return home;
     const [fx, fy, fw, fh] = v.frame;
-    const zoom = Math.min(22, Math.max(3.2, Math.min(this.avail.w / fw, this.avail.h / fh)));
+    const zoom = Math.min(22, Math.max(2.2, Math.min(this.avail.w / fw, this.avail.h / fh)));
     const right = new THREE.Vector3(Math.cos(HOME.azimuth), 0, -Math.sin(HOME.azimuth));
     const away = new THREE.Vector3(-Math.sin(HOME.azimuth), 0, -Math.cos(HOME.azimuth));
     const target = new THREE.Vector3(...v.target)
